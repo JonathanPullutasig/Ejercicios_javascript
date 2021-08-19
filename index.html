@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <main class="principal">
+      <h1 class="principal-title">Ejercicios Aplicaciones Informáticas</h1>
+      <div class="area-trabajo">
+        <div class="acordeon-preguntas">
+          <div class="preguntas">
+            <div class="seccion-preguntas animation">
+              <div class="pregunta-item">
+                <p>Lineales</p>
+                <p class="icono">+</p>
+              </div>
+              <div class="contenido-pregunta">
+                <a class="btn active" data-id="lineal-1">Ángulo de la sombra de un poste</a>
+                <a class="btn " data-id="lineal-2">Parte fraccionaria de un número</a>
+                <a class="btn " data-id="lineal-3">Encontrar el 6 número de 5 cifras</a>
+              </div>
+            </div>
+            <div class="seccion-preguntas">
+              <div class="pregunta-item">
+                <p>Alternativos</p>
+                <p class="icono">+</p>
+              </div>
+              <div class="contenido-pregunta">
+                <a class="btn" data-id="Alter-1">Calcule duración de un vuelo</a>
+                <a class="btn" data-id="Alter-2">Raíces reales de una ecuación</a>
+                <a class="btn" data-id="Alter-3">Monto a pagar por el alquiler de un vehículo</a>
+                <a class="btn" data-id="Alter-4">Calcular la edad de una persona</a>
+              </div>
+            </div>
+            <div class="seccion-preguntas">
+              <div class="pregunta-item">
+                <p>Repetición</p>
+                <p class="icono">+</p>
+              </div>
+              <div class="contenido-pregunta">
+                <a class="btn" data-id="repe-1">Control de una Gasolinera</a>
+                <a class="btn" data-id="repe-2">Determinar si un número es</a>
+                <a class="btn" data-id="repe-3">Hallar e imprimir los números naturales</a>
+                <a class="btn" data-id="repe-4">Imprimir números de 3 cifras</a>
+              </div>
+            </div>
+            <div class="seccion-preguntas">
+              <div class="pregunta-item">
+                <p>Otros</p>
+                <p class="icono">+</p>
+              </div>
+              <div class="contenido-pregunta">
+                <a class="btn" data-id="otros-1">Interfaz de voz</a>
+                <a class="btn" data-id="otros-2">Cantidad de veces de una letra</a>
+                <a class="btn" data-id="otros-3">Librería Random</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="position: absolute; top: 580px; left: 60px;">Jonathan Pullutasig 6465</p>
+        <div class="respuestas-preguntas">
+          <section class="respuestas-bg">
+            <div class="ejercicio lineales-1 active" id="lineal-1">
+              <p class="parrafo-eje">
+                1. Conocida la altura(h) de un poste y el largo de la sombra
+                de este proyectada sobre la acera(s),a una hora determinada
+                del día, haga un programa que calcule e imprima (grados,
+                minutos y segundos), el ángulo de incidencia del sol en ese
+                momento.
+              </p>
+              <div class="datos">
+                <label class="block" for="">Ingrese la altura</label>
+                <input class="block" type="number" id="altura" />
+                <br>
+                <label class="block" for="">Ingrese el largo de la sombra</label>
+                <input class="block" type="number" id="proyeccion" /> <br>
+                <label for="">Direccion de sombra:</label>
+                <input type="radio" name="direccion" value="izquierda" checked id="este" onchange="Datos()">
+                <label for="">Este</label>
+                <input type="radio" name="direccion" value="izquierda" id="oeste" onchange="Datos()">
+                <label for="">Oeste</label>
+                <p style="opacity: 0;">s</p>
+                <button class="btn-ca" onclick="Datos()">Calcular</button>
+                <div class="div-res">
+                  <label >Angulo :</label>
+                  <label id="angulo">0</label><br>
+                  <br>
+                  <!-- <p id="angulo">0</p> <br> -->
+                  <label >Hora :</label>
+                  <label id="hora">0</label>
+                  <!-- <p id="hora">0</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="ejercicio lineales-2" id="lineal-2">
+              <p class="parrafo-eje">
+                2. Confeccione un programa para imprimir la parte
+                fraccionaria de un número.
+              </p>
+              <div class="datos">
+                <label class="block" for="eje2">Ingrese un número</label>
+                <input class="block" type="text" id="eje2" />
+                <button class="btn-ca" style="position: relative; top: 70px; left: -200px;">Calcular</button>
+                <div class="div-res">
+                  <!-- <p > 0</p> -->
+                  <p style="margin-top: 50px; margin-left: 75px;" class="respuesta-p">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="ejercicio lineales-1" id="lineal-3">
+              <p class="parrafo-eje">
+                3. Dados 5 números de 5 cifras encontrar el 6 número de 5 cifras también de la forma siguiente:
+                <br> <b>9</b>4567
+                <br> 2<b>8</b>954
+                <br> 36<b>5</b>32
+                <br> 456<b>6</b>8
+                <br> 6578<b>8</b>
+                <br> Número de 5 cifras: 98568
+              </p>
+              <div class="datos res-eje3">
+                <label class="blockn" for="">Número 1</label>
+                <input class="blockn" type="number" id="eje3_1" /><br>
+                <label class="blockn" for="">Número 2</label>
+                <input class="blockn" type="number" id="eje3_2" /><br>
+                <label class="blockn" for="">Número 3</label>
+                <input class="blockn" type="number" id="eje3_3" /><br>
+                <label class="blockn" for="">Número 4</label>
+                <input class="blockn" type="number" id="eje3_4" /><br>
+                <label class="blockn" for="">Número 5</label>
+                <input class="blockn" type="number" id="eje3_5" />
+                <button class="btn-ca">Calcular</button>
+                <div class="div-res">
+                  <p class="respuesta-p">0</p>
+                </div>
+              </div>
+            </div>
+            <!-- ejercicios alternativos -->
+            <div class="ejercicio lineales-1" id="Alter-1">
+              <p class="parrafo-eje">
+                1. Un avión emplea 10 minutos para despegar del aeropuerto internacional “Mariscal Sucre”, vuela de
+                forma estable durante n minutos y emplea 15 segundos en aterrizar. Confecciona un programa para imprimir
+                en qué fase del vuelo se encuentra el avión a los t minutos del despegue. Imprima , además, la duración
+                del vuelo en horas, minutos y segundos.
+              </p>
+              <div class="datos">
+                <label class="block" for="">Ingrese fecha y hora de salida</label>
+                <input class="block" type="datetime-local" id="fechaSalida" name="fechaSalida" /><br>
+                <label class="block" for="">Ingrese fecha y hora de llegada</label>
+                <input class="block" type="datetime-local" id="fechaLlegada" name="fechaLlegada" /><br>
+                <label class="block" for="">Tiempo de vuelo(minutos)</label>
+                <input class="block" type="number" id="tiempo" name="tiempo" value="10" />
+                <button class="btn-ca" style="position: relative; top: 50px; left: -200px;" onclick="Datos_4()">Calcular</button>
+                <div class="div-res">
+                  <label class="label-respuesta">Respuesta :</label>
+                  <label class="label-re" id="respuesta">0</label>
+                  <br>
+                  <label class="label-respuesta">Etapa de vuelo :</label>
+                  <label class="label-re" id="etapa">0</label>
+                </div>
+
+              </div>
+            </div>
+            <div class="ejercicio lineales-2" id="Alter-2">
+              <p class="parrafo-eje">
+                2. Confeccione un programa para calcular las raíces reales de una ecuación de la forma ax2 + bx +c
+              </p>
+              <div class="datos">
+                <label class="block" for="">Ingrese el valor de a</label>
+                <input class="block" type="number" id="ax2" name="ax2" value="" /><br>
+                <label class="block" for="">Ingrese el valor de b</label>
+                <input class="block" type="number" id="bx" name="bx" value="" /><br>
+                <label class="block" for="">Ingrese el valor de c</label>
+                <input class="block" type="number" id="c" name="c" value="" />
+                <!-- <input class="blockn" type="text" id="eje3_5"/> -->
+                <button class="btn-ca" name="calcular" value="Calcular"
+                style="position: relative; top: 50px; left: -200px;" onclick="Datos_5()">Calcular</button> 
+                <p style="opacity: 0;">s</p>
+                <div style="margin-top: 20px;" class="div-res">
+                  <label class="respuesta-p">x1 = </label>
+                  <label class="respuesta-p" id="x1">x1</label>
+                  <br>
+                  <label class="respuesta-p">x2 = </label>
+                  <label class="respuesta-p" id="x2">x2</label>
+                </div>
+              </div>
+            </div>
+            <div class="ejercicio lineales-1" id="Alter-3">
+              <p>3. Una compañía dedicada al alquiler de automóviles cobra un monto fijo de $300000 para los primeros
+                300 km de recorrido. Para más de 300 km y hasta 1000 km, cobra un monto adicional de $ 15.000 por cada
+                kilómetro en exceso sobre 300. Para más de 1000 km cobra un monto adicional de $ 10.000 por cada
+                kilómetro en exceso sobre 1000. Los precios ya incluyen el 20% del impuesto general a las ventas, IVA.
+                Diseñe un programa que determine el monto a pagar por el alquiler de un vehículo y el monto incluido del
+                impuesto.</p>
+              <div class="datos">
+                <label class="block" for="">Ingrese el numero de km</label>
+                <input class="block" type="number" id="kilometraje" /><br>
+                <!-- <input class="blockn" type="text" id="eje3_5"/> -->
+                <button class="btn-ca" onclick="Datos_6()">Calcular</button>
+                <div class="div-res">
+                  <label for="">Total a pagar :</label>
+                  <label for="" id="pago"></label> <br>
+                  <label for="">Impuesto 20% :</label>
+                  <label for="" id="impuesto"></label>
+
+                </div>
+
+              </div>
+            </div>
+            <div class="ejercicio lineales-2" id="Alter-4">
+              <p>4. Calcule la edad de una persona conociendo su fecha de nacimiento en día, mes y año</p>
+              <div class="datos">
+                <label class="block" for="">Fecha de nacimiento:</label>
+                <input class="block" type="date" id="fecha" /><br>
+
+                <button class="btn-ca" onclick="Datos_7()">Calcular</button>
+                <div class="div-res">
+                  <label for="">Edad:</label>
+                  <label for="" id="edad"></label> <br>
+                </div>
+              </div>
+            </div>
+            <!-- ejercicios de repeticion --------------------->
+            <div class="ejercicio lineales-1" id="repe-1">
+              <p class="parrafo-eje">
+                1. En una gasolinera se instala un detector para controlar la cantidad de litros de gasolina que va
+                despachando el pistero. Se conoce que al comenzar el turo de trabajo en el tanque de gasolina hay N
+                litros. Confeccione un programa para conocer constantemente.
+                <br>
+                &#10004; La cantidad de vehículos atendidos. <br>
+                &#10004; La cantidad de dinero recaudado si cada litro de gasolina especial cuesta $1,25 ctvos. de dólar. <br>
+                &#10004; Cuál es la mayor cantidad de gasolina despachada a un vehículo
+              </p>
+              <div class="datos">
+                <!-- <label class="block" for="">Ingrese el numero de litros</label>
+                <input class="block" type="text" /><br> -->
+                <!-- inicio -->
+                <form class="modal-body" name="formularioREP_1">
+                    
+                  <div class="container-font-label">
+                      <label for="">Cantidad de Litros Existentes</label>
+                      <input type="number" name="txtCantidadLitro" placeholder="Litros disponibles"><br>
+                      <label for="">Cantidad a despachar</label>
+                      <input type="number" name="txtLitro" placeholder="cantidad a despachar"><br>
+                      <br><button class="btn-ca" type="button" onclick="gasolineras()">Despachar</button><br>
+                      <p style="opacity: 0;">s</p>
+                      <label for="">Cantidad de vehículos atendidos</label>
+                      <input type="text" name="txtContador" id="txtContador"><br>
+                      <label for="">Cantidad de dinero recaudado</label>
+                      <input type="text" name="txtDineroObtenido" id=""><br>
+                      <label for="">May can de litros de gasolina despachado</label>
+                      <input type="number" name="txtCantidadGasolina" id=""><br>
+                      
+                      
+                  </div>
+              </form>
+                <!-- fin -->
+              </div>
+            </div>
+            <div class="ejercicio lineales-2" id="repe-2">
+              <p class="parrafo-eje">
+                2. Elabore un programa que lea un número y averiguar: perfecto, capicúa, palíndromo, factorial,
+                factorión y su número de cifras.
+              </p>
+              <div class="datos">
+                <label class="block" for="">Ingrese un número</label>
+                <input class="block" type="number" id="numero"><br>
+                <button class="btn-ca" onclick="MostrarResutados()">Calcular</button>
+                <div class="div-res">
+                  <label>Es perfecto:</label>
+                  <label id="perfecto"></label> <br><br>
+                  <label>Es capicúa:</label>
+                  <label id="capicua"></label>
+                  <br><br>
+                  <label>Factorial: </label>
+                  <label id="factorial"></label>
+                  <br><br>
+                  <label>Es factoríon: </label>
+                  <label id="factorion"></label>
+                  <br><br>
+                  <label>Número de cifras: </label>
+                  <label id="cifras"></label>
+
+                </div>
+              </div>
+            </div>
+            <div class="ejercicio lineales-1" id="repe-3">
+              <p>3. Confeccione un programa para hallar e imprimir los números naturales que cumplan simultáneamente las
+                condiciones siguientes:
+                • Se encuentren entre 1200 y 2000.
+                • Tengan exactamente 4 divisores enteros positivos que son 1,5, otro número primo y el propio número.
+              </p>
+              <div class="datos">
+                <!-- <label class="block" for="">Fecha de nacimiento:</label> -->
+                <!-- <input class="block" type="date" id="fecha"/><br> -->
+
+                <button class="btn-ca" onclick="MostrarResutados_10(1200,2000)">Calcular</button>
+                <div style="max-width: 300px;" class="div-res">
+                  <label for="">Lista de números</label><br><br><br>
+                  <label for="" id="numeros"></label>
+                </div>
+              </div>
+            </div>
+            <div class="ejercicio lineales-2" id="repe-4">
+              <p>4. Confeccione un programa para imprimir todos los números de 3 cifras que se puedan formar con los
+                dígitos 1,2,3,4 con la condición de que en cada número no haya dígitos iguales.</p>
+              <div class="datos">
+                <!-- <label class="block" for="">Fecha de nacimiento:</label> -->
+                <!-- <input class="block" type="date" id="fecha"/><br> -->
+
+                <button class="btn-ca" onclick="MostrarResutados_11()">Calcular</button>
+                <div style="max-width: 300px;" class="div-res">
+                  <label for="combinaciones">Lista de números</label><br><br><br><br>
+                  <label for="" id="combinaciones"></label>
+                </div>
+              </div>
+
+            </div>
+            <!-- ejercicios otros -->
+            <div class="ejercicio lineales-1" id="otros-1">
+              <p class="parrafo-eje">
+                1. Realizar el programa de interfaz de voz.
+              </p>
+              <div style="margin-left: -200px;" class="datos">
+                <button class="btn-ca" id="btnStartRecord">Empezar a grabar</button>
+                <button class="btn-ca" id="btnStopRecord">Terminar Grabación</button>
+                <button class="btn-ca" id="playText">Reproducir</button>
+
+              </div>
+              <textarea style="margin-top: 50px;margin-left: 100px;" id="textovoz" cols="50" rows="10"></textarea>
+            </div>
+            <div class="ejercicio lineales-2" id="otros-2">
+              <p class="parrafo-eje">
+                2. Cadenas: Confeccione un programa que lea una oración e imprima cada una de las letras que aparecen en
+                ella, con la cantidad de veces que aparecen escrito a su dereha. <br>
+                Ejemplo: “ESE ES EL ERROR ” <br>
+                E 5 <br>
+                S 2 <br>
+                L 1 <br>
+                R 3 <br>
+                O 1 <br>
+              </p>
+              <br>
+              <label for="texto">Ingrese una cadena</label>
+              <input for="" id="texto"></input>
+              <p style="opacity: 0;">s</p>
+
+              <button class="btn-ca" onclick="contar()">Verificar</button>
+              <div class="div-res">
+                <label for="" id="resultado"></label>
+
+              </div>
+            </div>
+            <div class="ejercicio lineales-1" id="otros-3">
+              <p>3. Realizar un programa que utilice la librería random. (valido como tarea de los parámetros del tercer
+                parcial).</p>
+                <h1 style="text-align: center;">Encuentra el tesoro</h1>
+                <img id="mapa" src="img/treasuremap.png" alt="" style="position: relative; left: 100px;" >
+                <div class="div-res">
+                  <!-- <label for="combinaciones"></label><br> -->
+                  <label for="" id="distancia"></label>
+                </div>
+            </div>
+            
+          </section>
+        </div>
+      </div>
+  </div>
+  </main>
+  </div>
+  <script src="script.js"></script>
+  <script src="ejercicios js/lineales.js"></script>
+</body>
+
+</html>
